@@ -1,0 +1,64 @@
+{
+  "name": "ping",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@reduxjs/toolkit": "^2.5.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.3.3",
+    "fuse.js": "^7.1.0",
+    "github-markdown-css": "^5.8.1",
+    "jquery": "^3.7.1",
+    "react": "^18.3.1",
+    "react-accessible-accordion": "^5.0.0",
+    "react-countup": "^6.5.3",
+    "react-dom": "^18.3.1",
+    "react-google-recaptcha-v3": "^1.10.1",
+    "react-markdown": "^10.0.0",
+    "react-masonry-css": "^1.0.16",
+    "react-modal-video": "^2.0.2",
+    "react-redux": "^9.2.0",
+    "react-router": "^6.26.2",
+    "react-router-dom": "^6.26.2",
+    "react-scripts": "5.0.1",
+    "react-tabs": "^6.0.2",
+    "react-visibility-sensor": "^5.1.1",
+    "remark-gfm": "^4.0.1",
+    "sass": "^1.78.0",
+    "swiper": "^11.1.12",
+    "web-vitals": "^2.1.4",
+    "wowjs": "^1.1.3",
+    "yet-another-react-lightbox": "^3.21.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
