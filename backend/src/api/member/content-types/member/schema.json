@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "members",
+  "info": {
+    "singularName": "member",
+    "pluralName": "members",
+    "displayName": "Members",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "shortDescription": {
+      "type": "string",
+      "required": true
+    },
+    "longDescription": {
+      "type": "text",
+      "required": true
+    },
+    "gitHub": {
+      "type": "string",
+      "unique": false
+    },
+    "linkedIn": {
+      "type": "string"
+    },
+    "telefon": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "blog_posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-post.blog-post",
+      "mappedBy": "author"
+    },
+    "work": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultMarkdown"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "profiePhoto": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "technologies": {
+      "displayName": "technologies",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.technologies"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+name: Build template
+run-name: ${{ gitea.actor }} pushed to ${{ gitea.repository }} at ${{ gitea.branch }}.
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Build-Plan:
+    runs-on: debian12-builder
+    container:
+      image: git.skai.pingteam.ro/mateibusui/builder:latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 10
+      - name: Build strapi
+        run: |
+          cd ${{ gitea.workspace }}/backend
+          npm install
+          npm run build
+          ls

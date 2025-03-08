@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_feature_items",
+  "info": {
+    "displayName": "featureItem",
+    "icon": "arrowUp",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "featureItemTitle": {
+      "type": "string"
+    },
+    "featureItemDescription": {
+      "type": "text"
+    },
+    "featureItemImg": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}

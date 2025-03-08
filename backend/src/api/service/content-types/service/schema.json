@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Services",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "shortDescription": {
+      "type": "text",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultMarkdown"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "fqa": {
+      "displayName": "fqa",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.fqa"
+    },
+    "serviceStrongPoints": {
+      "displayName": "servicesStrongPoints",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.services-strong-points",
+      "required": true
+    }
+  }
+}
