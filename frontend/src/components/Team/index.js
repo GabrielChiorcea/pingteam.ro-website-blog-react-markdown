@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import teamImg from "../../assets/img/team/user_placeholder.png";
 
 const SingleTeam = (props) => {
-  const { itemClass, Image, Name, Title, Slug, GitHub, LinkedIn } = props;
+  const { itemClass, Image, Name, Title, Slug, GitHub, LinkedIn, Site } = props;
   return (
     <div className={itemClass ? itemClass : "team__item text-center"}>
       <div className="team__main-thumb">
@@ -25,6 +25,7 @@ const SingleTeam = (props) => {
         </h5>
         <span>{Title ? Title : "Founder"}</span>
       </div>
+      
     </div>
   );
 };

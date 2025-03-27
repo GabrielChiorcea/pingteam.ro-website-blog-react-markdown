@@ -3,6 +3,11 @@
 /*----------------------------------------*/
 /*  23. social CSS START
 /*----------------------------------------*/
+.socialContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .social{
     &__shape-1 {
         position: absolute;

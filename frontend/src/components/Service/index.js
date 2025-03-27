@@ -35,7 +35,7 @@ const SingleService = (props) => {
         </div>
         <div className="service__inner-icon">
           <span>
-            <a href="#">
+            <a href="/service">
               <i className={serviceIcon ? serviceIcon : "fal fa-plug"}></i>
             </a>
           </span>
@@ -45,7 +45,7 @@ const SingleService = (props) => {
         <h4
           className={titleClass ? titleClass : "service__title title-color-1"}
         >
-          <Link to={`/${btnURL ? btnURL : "service-details"}`}>
+          <Link to={`/${btnURL ? btnURL : "service"}`}>
             {Title ? Title : "Get Latest Updates"}{" "}
           </Link>
         </h4>
@@ -58,7 +58,7 @@ const SingleService = (props) => {
       <div
         className={btnClass ? btnClass : "service__link service__link-color-1"}
       >
-        <Link to={`/${btnURL ? btnURL : "service-details"}`}>
+        <Link to={`/${btnURL ? btnURL : "service"}`}>
           {btnText ? btnText : "Read More"}
           <i className="fal fa-arrow-right"></i>
         </Link>

@@ -79,6 +79,7 @@ const HomeMain = () => {
                   <SocialFeed
                     linkedInlink={member.linkedIn}
                     githublink={member.gitHub}
+                    sitelink={member.site}
                   />
                 </div>
               </div>

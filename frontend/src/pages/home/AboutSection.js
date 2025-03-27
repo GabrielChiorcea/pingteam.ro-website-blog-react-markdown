@@ -56,14 +56,14 @@ const About = () => {
             <div className="row gx-0">
               <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 about__border-right">
                 <div className="about__contact-box d-flex align-items-center">
-                  <div className="about__contact-icon">
+                  {/* <div className="about__contact-icon">
                     <span>
                       <i className="fas fa-phone-alt"></i>
                     </span>
                   </div>
                   <div className="about__contact-number">
                     <a href="tel:">{homeData?.data[0]?.aboutContactnumber}</a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">

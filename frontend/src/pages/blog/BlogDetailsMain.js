@@ -9,6 +9,7 @@ import CTA from "../../components/CTA";
 
 
 import NewestPost from "./NewestPost";
+import {Helmet} from "react-helmet";
 
 const BlogDetailsMain = () => {
   const { slug } = useParams();
@@ -23,6 +24,20 @@ const BlogDetailsMain = () => {
   }
   return (
     <main>
+      <Helmet>
+        <title>{blogPost.blogTitle}</title>
+        <meta name="description" content={blogPost.blogContent} />
+        <meta name="keywords" content={blogPost.blogTitle} />
+        <meta property="og:title" content={blogPost.blogTitle} />
+        <meta property="og:description" content={blogPost.blogContent} />
+        <meta property="og:image" content={`${image}${blogPost.blogImage.url}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={window.location.href} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={blogPost.blogTitle} />
+        <meta name="twitter:description" content={blogPost.blogContent} />
+        <meta name="twitter:image" content={`${image}${blogPost.blogImage.url}`} />
+      </Helmet>
       <Breadcrumb pageTitle="Blog Details" />
 
       <div className="postbox__area pt-100 pb-100">

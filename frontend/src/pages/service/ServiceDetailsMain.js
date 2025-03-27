@@ -25,6 +25,7 @@ const ServiceDetailsMain = () => {
 
       <div className="service-details__area service-details__plr mt-110 mb-30">
         <div className="container-fluid">
+          
           <div className="row">
             <div
               className="col-xl-8 col-lg-7 wow animate__fadeInLeft"
@@ -46,21 +47,25 @@ const ServiceDetailsMain = () => {
                 {service.title}
               </h3>
             </div>
-            <div
+
+
+
+          </div>
+
+          <div
               className="col-xl-4 col-lg-5 wow animate__fadeInRight"
               data-wow-duration=".9s"
               data-wow-delay=".5s"
             >
               <div className="service-details__service-item">
                 <h4>What you get</h4>
-                <ul>
+                <ul >
                   {service.serviceStrongPoints.map((point, index) => (
                     <li key={index}>{point.serviceStrongPoint}</li>
                   ))}
                 </ul>
               </div>
             </div>
-          </div>
           <div className="row">
             <div className="col-xl-12">
               <div

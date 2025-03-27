@@ -16,12 +16,12 @@
         font-size: 17px;
     }
     @media #{$xs}{                
-        font-size: 14px;
-        padding: 20px 10px;
+        font-size: 12px;
+        // padding: 20px 10px;
     }
     @media #{$sm}{                
         font-size: 17px;
-        padding: 20px;
+        // padding: 20px;
     }
     &[aria-expanded="true"]{
         background-color: var(--it-theme-1);
@@ -106,15 +106,15 @@
     }
 
     & .accordion-buttons {
-        position: relative;
-        width: 100%;
-        text-align: left;
-        font-size: 18px;
-        font-weight: 700;
-        padding: 40px 45px;
-        background-color: var(--tp-common-white);
-        color: #212121;
-        border-radius: 10px 10px 0 0;
+        // position: relative;
+        // width: 100%;
+        // text-align: left;
+        // font-size: 18px;
+        // font-weight: 700;
+        // padding: 40px 45px;
+        // background-color: var(--tp-common-white);
+        // color: #212121;
+        // border-radius: 10px 10px 0 0;
 
         @media #{$xs} {
             font-size: 17px;

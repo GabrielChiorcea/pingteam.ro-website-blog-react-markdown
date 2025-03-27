@@ -5,7 +5,8 @@ const initialState = {
   services: [],
   members: [],
   blog: [],
-  categories: []
+  categories: [],
+  servicesField: []
 };
 
 const dataSlice = createSlice({
@@ -27,8 +28,11 @@ const dataSlice = createSlice({
     setCategories: (state, action) => {
       state.categories = action.payload;
     },
+    servicesField: (state, action) => {
+      state.servicesField = action.payload
+    }
   },
 });
 
-export const { setHome, setServices, setMembers, setBlog, setCategories } = dataSlice.actions;
+export const { setHome, setServices, setMembers, setBlog, setCategories, servicesField } = dataSlice.actions;
 export default dataSlice.reducer;

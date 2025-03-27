@@ -805,10 +805,11 @@
     }
     &__service-item{
             background-color: #f7f9ff;
+
             padding: 47px 40px;
             margin-left: 20px;
             @media #{$xxl}{
-                padding: 15px 35px;
+                 padding: 15px 35px;
             } 
             @media #{$xl}{
                 padding: 20px;
@@ -836,10 +837,17 @@
                 padding-bottom: 15px;
             }
         }
-        & ul{                       
-            & li{
+        & ul{  
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;  
+            flex-wrap: wrap; 
+        }
+        & li{
+
                 font-weight: 600;
-                font-size: 18px;
+                font-size: 16px;
                 font-family: 'Poppins', sans-serif;
                 color: var(--it-common-black);
                 background-color: var(--it-common-white);
@@ -864,7 +872,7 @@
                 @media #{$xs}{
                     margin-bottom: 15px;
                     padding: 8px 12px;
-                    font-size: 15px;                 
+                    font-size: 14px;                 
                 } 
                 &:last-child{
                     margin-bottom: 0;
@@ -893,7 +901,10 @@
                     }
                 }
             }
-        }
+
+
+            
+        
     }
     &__list{
         padding-bottom: 75px;

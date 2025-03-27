@@ -188,7 +188,7 @@ const Header = (props) => {
                 <a href="maito:hello@yourmail.com">contact@pingteam.ro</a>
               </div>
             </div>
-            <div className="it-info-wrapper mb-20 d-flex align-items-center">
+            {/* <div className="it-info-wrapper mb-20 d-flex align-items-center">
               <div className="itoffcanvas__info-icon">
                 <a href="#">
                   <i className="fal fa-phone-alt"></i>
@@ -198,7 +198,7 @@ const Header = (props) => {
                 <span>Phone</span>
                 <a href="tel:+40771497457">0771 497 457</a>
               </div>
-            </div>
+            </div> */}
             <div className="it-info-wrapper mb-20 d-flex align-items-center">
               <div className="itoffcanvas__info-icon">
                 <a href="#">

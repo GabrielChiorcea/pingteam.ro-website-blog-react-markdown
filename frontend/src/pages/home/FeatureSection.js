@@ -7,7 +7,9 @@ import { useSelector } from 'react-redux';
 const Feature = () => {
   const [featureimg, setFeatureimg] = useState([]);
   const homeData = useSelector((state) => state.data.home);
+  const servicesField = useSelector((state) => state.data.servicesField);
   const image = process.env.REACT_APP_API_URL_IMAGE;
+  console.log(servicesField);
 
   useEffect(() => {
 
@@ -56,20 +58,20 @@ const Feature = () => {
           </div>
         </div>
         <div className="row">
-          {homeData?.data[0]?.featureItem.map((feature, index) => (
+          {servicesField.data.map((feature, index) => (
             <div
             key={index}
             className="col-xl-4 col-lg-6 col-md-6 mb-30 wow animate__fadeInUp"
             data-wow-duration="1.1s"
-            data-wow-delay=".5s"
+            data-wow-delay=".5s"x
           >
             <SingleFeature
               itemClass={`feature__item feature__color-${index + 1}  text-center`}
-              Image={`${image}${featureimg[index]?.featureItemImg.url}`}
-              Title={feature.featureItemTitle}
-              Description={feature.featureItemDescription}
+              Image={`${image}${feature.image.url}`}
+              Title={feature.serviceField}
+              Description={feature.serviceFieldDescription}
               btnText="See More"
-              btnURL="/service"
+              btnURL={`/service/${feature.serviceField}`}
             />
               </div>
             ))}

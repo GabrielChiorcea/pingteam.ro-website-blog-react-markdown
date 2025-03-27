@@ -6,6 +6,7 @@ import {
   setBlog,
   setMembers,
   setCategories,
+  servicesField
 } from "../features/update";
 
 const useGetData = (url, resource) => {
@@ -37,6 +38,8 @@ const useGetData = (url, resource) => {
               dispatch(setMembers(data));
             } else if (resource === "categories") {
               dispatch(setCategories(data));
+            }else if (resource === "servicesField") {
+              dispatch(servicesField(data));
             }
             setDataLoaded(true);
           } else {

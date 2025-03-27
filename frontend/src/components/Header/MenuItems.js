@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const MenuItems = (props) => {
@@ -49,36 +49,43 @@ const MenuItems = (props) => {
   return (
     <>
       <li
-        className={
-          parentMenu === 'home' ? 'has-dropdown active' : 'has-dropdown'
-        }
+        // className={
+        //   parentMenu === 'home' ? 'has-dropdown active' : 'has-dropdown'
+        // }
       >
         <Link to="/">Home</Link>
       </li>
       <li
-        className={
-          parentMenu === 'about' ? 'has-dropdown active' : 'has-dropdown'
-        }
+        // className={
+        //   parentMenu === 'home' ? 'has-dropdown active' : 'has-dropdown'
+        // }
+      >
+        <Link to="/members">Members</Link>
+      </li>
+      <li
+        // className={
+        //   parentMenu === 'about' ? 'has-dropdown active' : 'has-dropdown'
+        // }
       >
         <Link to="/about-us">About</Link>
       </li>
       <li
-        className={
-          parentMenu === 'service' ? 'has-dropdown active' : 'has-dropdown'
-        }
+        // className={
+        //   parentMenu === 'service' ? 'has-dropdown active' : 'has-dropdown'
+        // }
       >
         <Link to="/service">Service</Link>
       </li>
       <li
-        className={
-          parentMenu === 'page' ? 'has-dropdown active' : 'has-dropdown'
-        }
+        // className={
+        //   parentMenu === 'page' ? 'has-dropdown active' : 'has-dropdown'
+        // }
       >
         <Link to="/blog">Blog</Link>
       </li>
-      <li className={location.pathname === '/contact' ? 'active' : ''}>
+      {/* <li className={location.pathname === '/contact' ? 'active' : ''}>
         <Link to="/contact">Contact</Link>
-      </li>
+      </li> */}
     </>
   );
 };

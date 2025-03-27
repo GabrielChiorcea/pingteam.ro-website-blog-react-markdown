@@ -19,6 +19,7 @@ import Error from './pages/error';
 import Blog from './pages/blog';
 import BlogDetails from './pages/blog/blog-details';
 import Contact from './pages/contact';
+import Members from './pages/members';
 
 import Preloader from './components/Preloader';
 import ScrollToTop from './components/ScrollTop';
@@ -28,6 +29,7 @@ import useGetData from './hooks/useGetData';
 const App = () => {
   const home = process.env.REACT_APP_API_URL_HOME;
   const services = process.env.REACT_APP_API_URL_SERVICES;
+  const serviceField = process.env.REACT_APP_API_URL_SERVICES_FIELD
   const blog = process.env.REACT_APP_API_URL_BLOG_POSTS;
   const members = process.env.REACT_APP_API_URL_MEMBERS;
   const categories = process.env.REACT_APP_API_URL_CATEGORIES;
@@ -41,6 +43,7 @@ const App = () => {
   const dataLoadedMembers = useGetData(members, "members");
   const dataLoadedBlog = useGetData(blog, "blog");
   const dataLoadedCategory = useGetData(categories, "categories");
+  const servicesField = useGetData(serviceField, "servicesField");
 
 
   useEffect(() => {
@@ -48,10 +51,11 @@ const App = () => {
       dataLoadedServices && 
       dataLoadedBlog && 
       dataLoadedMembers && 
-      dataLoadedCategory) {
+      dataLoadedCategory &&
+      servicesField) {
       setIsLoading(false);
     }
-  }, [dataLoadedHome, dataLoadedServices, dataLoadedBlog, dataLoadedMembers, dataLoadedCategory]);
+  }, [dataLoadedHome, dataLoadedServices, dataLoadedBlog, dataLoadedMembers, dataLoadedCategory, servicesField]);
 
   // Initialize wowjs and animate.css
   useEffect(() => {
@@ -71,6 +75,7 @@ const App = () => {
         <Route path="/about-me/:slug" element={<AboutMe />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/service" element={<Service />} />
+        <Route path="/service/:slug" element={<Service />} />
         <Route path="/service-details/:slug" element={<ServiceDetails />} />
         <Route path="/project" element={<Project />} />
         <Route path="/project-1" element={<ProjectOne />} />
@@ -82,6 +87,7 @@ const App = () => {
         <Route path="/blog/:slug" element={<Blog />} />
         <Route path="/blog-details/:slug" element={<BlogDetails />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/members" element={<Members />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>

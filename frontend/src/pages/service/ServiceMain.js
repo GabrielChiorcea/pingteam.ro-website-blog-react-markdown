@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import SingleService from "../../components/Service";
 import Breadcrumb from "../../components/Breadcrumb";
 import CTA from "../../components/CTA";
@@ -8,7 +9,11 @@ import serviceIconBg from "../../assets/img/service/sv-icon-shape-7.png";
 import { useSelector } from "react-redux";
 
 const ServiceMain = () => {
-  const services = useSelector((state) => state.data.services);
+  const { slug } = useParams();
+  const service = useSelector((state) => state.data.services);
+  const services = slug 
+  ? service?.data?.filter((item) => item.service_field.serviceField === slug) 
+  : service?.data || [];
 
   return (
     <main>
@@ -17,7 +22,8 @@ const ServiceMain = () => {
       <div className="service__area service__plr mt-100 mb-20 p-relative">
         <div className="container-fluid">
           <div className="row">
-            {services.data.map((service) => (
+            { services && services.length > 0 ? (
+            services.map((service) => (
               <div
                 key={service.id}
                 className="col-xl-4 col-lg-6 col-md-6 mb-30 wow animate__fadeInUp"
@@ -38,7 +44,12 @@ const ServiceMain = () => {
                   btnText="Read More"
                 />
               </div>
-            ))}
+            ))
+          ) : (
+            <div className="col-xl-12 text-center " style={{ marginBottom: "50px"}}>
+              <h3>No service found</h3>
+            </div>
+          )}  
           </div>
         </div>
       </div>
