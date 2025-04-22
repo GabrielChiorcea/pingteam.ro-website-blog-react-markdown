@@ -1,4 +1,4 @@
-# 📰 frontend-blog-react-markdown
+# 📰 pingteam.ro-website-blog-react-markdown
 
 A dynamic, full-featured **React-based blog** developed for a vibrant Linux professionals community I'm proud to be a part of. This project delivers a clean, fast, and fully dynamic frontend that communicates seamlessly with a custom-built backend using **Strapi CMS**.
 
